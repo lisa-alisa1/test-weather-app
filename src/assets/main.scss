@@ -1,0 +1,88 @@
+@import '../assets/scss/reset';
+@import '../assets/scss/variables';
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: Moderustic;
+    src: url("../assets/fonts/Moderustic-VariableFont_wght.ttf") format("truetype"),
+}
+
+
+
+
+body {
+    background: linear-gradient($primary-color 0%, $secondary-color 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    
+}
+div, li, input {
+    font-family: Moderustic;
+}
+p, button {
+    font-family: Montserrat;
+    color: #262525
+}
+
+main {
+    padding: 40px;
+}
+
+.weather-blocks {
+    display: flex;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    max-width: calc(100% + 2 * 40px); 
+    margin-left: -40px;
+    margin-right:  -40px;
+    box-sizing: border-box; 
+    position: relative;
+    padding-left: 40px;
+
+      
+}
+
+.weather-blocks::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari и Opera */
+}
+
+
+@media( max-width: 1024px) {
+    .weather-blocks {
+        overflow-x: hidden;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        box-sizing: content-box;
+
+    }
+}
+
+
+
+@media( max-width: 950px) {
+    .weather-blocks {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media( max-width: 460px) {
+    body {
+        background-repeat: repeat-x;
+    }
+}
+
+
+   
