@@ -14,12 +14,12 @@ export const useLocationStore = defineStore('location', {
       async fetchUserLocation() {
         this.error = null;
         try {
-          const response = await axios.get('http://ip-api.com/json');
+          const response = await axios.get('https://ipwho.is/');
           if (response.data) {
             this.city = response.data.city;
             this.country = response.data.country;
-            this.lat = response.data.lat;
-            this.lon = response.data.lon;
+            this.lat = response.data.latitude;
+            this.lon = response.data.longitude;
 
           } else {
             throw new Error('Failed to retrieve location data');

@@ -37,7 +37,7 @@ export default {
           return;
         }
           axios.get(
-            `http://api.openweathermap.org/geo/1.0/direct?q=${this.inputData}&limit=5&appid=${ import.meta.env.VITE_OPENWEATHER_API_KEY }`
+            `https://api.openweathermap.org/geo/1.0/direct?q=${this.inputData}&limit=5&appid=${ import.meta.env.VITE_OPENWEATHER_API_KEY }`
           ).then(response => {
              this.cities = response.data.map(city => ({
                 id: city.country,

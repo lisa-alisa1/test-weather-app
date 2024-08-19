@@ -5,11 +5,18 @@
                 <div class="flex-type">
                     <p class="day">today</p>
                     <div class="icon-wrap">
-                          <img 
-                            :src="isFavoriteLocal ? '/src/assets/img/icons/favorite-active.svg' : '/src/assets/img/icons/favorite.svg'"  
+                        <img
+                            v-if="isFavoriteLocal"
+                            src="../assets/img/icons/favorite-active.svg"
                             class="favorite-icon"
                             @click="toggleFavorites()"
-                          >
+                        >
+                        <img
+                            v-else
+                            src="../assets/img/icons/favorite.svg"
+                            class="favorite-icon"
+                            @click="toggleFavorites()"
+                        >
                          <img 
                             v-if="indexBlock"
                             src="../assets/img/icons/delete.svg"  
